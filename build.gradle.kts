@@ -40,7 +40,7 @@ tasks {
 
     val testInput = readInput("Day${newDayNum}_test")
     check(part1(testInput) == 0)
-
+    check(part2(testInput) == 0)
     val input = readInput("Day$newDayNum")
     part1(input).println()
     part2(input).println()
