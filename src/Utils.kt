@@ -34,3 +34,13 @@ operator fun String.component2() = this[1]
 operator fun String.component3() = this[2]
 
 operator fun String.component4() = this[3]
+
+private fun String.forgivingSubString(range: IntRange): String {
+    var start = range.first
+    var end = range.last
+
+    if (end > this.length - 1) end = this.length - 1
+    if (start < 0) start = 0
+
+    return this.substring(start..end)
+}
